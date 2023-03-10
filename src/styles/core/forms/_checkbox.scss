@@ -1,0 +1,17 @@
+.form {
+    &-group--checkbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    &-checkbox {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        min-width: 125px;
+
+        label {
+            margin-left: 3px;
+        }
+    }
+}

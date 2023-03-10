@@ -1,0 +1,86 @@
+.stepper {
+
+    &--bar__header {
+        li {
+            list-style-type: none;
+            float: left;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 66%;
+                height: 1px;
+                background-color: #ddd;
+                top: 15px;
+                left: -3%;
+                z-index: -1;
+                transform: translate(50%, -50%);
+            }
+            &.active:after{
+                background-color: $primary-color;
+            }
+            &.active .stepper--bar__header--title-count {
+                background-color: $primary-color;
+            }
+        }
+        &--title {
+            margin-left: 0.5rem;
+
+            &-count {
+                height: 30px;
+                width: 30px;    
+                line-height: 30px;
+                display: block;
+                text-align: center;
+                border-radius: 50%;
+                background-color: #868686;
+                color: white;
+            }
+        }
+    }
+    &--bar__content {
+        min-height: 200px;
+        clear: both;
+    
+        &--label {
+            display: none;
+
+            &.label--active {
+                display: block;
+            }
+            &__info {
+                padding: .5rem;
+
+                &--message {
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #d4d4d4;
+
+                    &__fields {
+                        font-size: 12px;
+                    }
+
+                    &__data {
+                        color: $primary-color;
+                        font-weight: 700;
+                        font-size: 17px;
+                    }
+                }
+                &--error {
+                    color: #bd6161;
+
+                    a {
+                        color: #bd6161;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+}

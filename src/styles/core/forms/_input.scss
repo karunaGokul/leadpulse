@@ -1,0 +1,232 @@
+.form-field {
+  position: relative;
+  margin-bottom: 1rem;
+
+  &.form-field__standard {
+      .form-field__control {
+          &::after {
+              border-bottom: 2px solid $success-color;
+          }
+          .form-field__input, .form-field__textarea {
+              border-bottom: 1px solid #999;
+          }
+      }
+
+      &.form-field--is-active {
+          .form-field__control {
+              &::after {
+                border-bottom: 2px solid $success-color;
+                transform: scaleX(150);
+              }
+            }
+            .form-field__label {
+              color: $success-color;
+              @include label-active();
+            }
+      }
+      &.form-field--is-invalid {
+        .form-field__error--box {
+          display: block;
+        }
+        .form-field__control {
+          &::after {
+            border-bottom: 2px solid $warn-color;
+            transform: scaleX(150);
+          }
+        }
+        .form-field__label {
+          color: $warn-color;
+          @include label-active();
+        }
+        .form-field__control--icon__prefix, .form-field__control--icon__suffix {
+          color: $warn-color;
+        }
+      }
+  }
+
+  &__label {
+      display: block;
+      font-size: 1rem;
+      font-weight: normal;
+      left: 0;
+      margin: 0;
+      padding: 18px 12px 0 ;
+      position: absolute;
+      top: 0;
+      transition: all $animation-duration;
+      z-index: -1;
+      color: #848484;
+  }
+
+  &__control {
+      background: #eee;
+      border-radius: 8px 8px 0 0;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      z-index: 999999;
+      
+      &::after {
+        //border-bottom: 2px solid $primary-color;
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        transform: scaleX(0);
+        transition: all $animation-duration;
+        width: 1%;
+      }
+  }
+
+  &__input, &__textarea {
+      appearance: none;
+      background: transparent;
+      border: 0;
+      color: #333;
+      display: block;
+      font-size: 1rem;
+      margin-top: 15px;
+      outline: 0;
+      padding: 10px 12px;
+      width: 100%;
+  }
+
+  &__textarea {
+      height: 150px;
+  }
+
+  &__control--icon {
+      .form-field__label {
+          padding: 18px 35px 0;
+        }
+        .form-field__input {
+          padding: 7px 12px 10px 35px;
+        }
+        &__suffix, &__prefix {
+          position: absolute;
+          top: 16px;
+          color: $success-color;
+        }
+        &__suffix {
+          cursor: pointer;
+          right: 13px;
+        }
+        &__prefix {
+          left: 13px;
+        }
+  }
+  &__errors {
+    position: absolute;
+    bottom: -19px;
+    color: #cd5a5a;
+  }
+  &__error--box {
+    display: none;
+    position: absolute;
+    background-color: #e0e0e0;
+    color: #656262;
+    z-index: 9999;
+    right: -245px;
+    top: 0;
+    border-radius: 5px;
+    font-size: 14px;
+
+    .error--message {
+      padding: 0.8rem;
+    }
+  }
+
+  .fa {
+    padding-right: 6px;
+
+    &--danger {
+      color: $warn-color;
+    }
+    &--success {
+      color: $success-color;
+    }
+  }
+  &__select-control {
+    background-color: #eee;
+    border-right: 1px solid #cecece;
+    
+    select {
+      background-color: #eee;
+      border: none;
+      outline: none;
+      padding-right: 1rem;
+      text-align: center;
+      padding-left: 1rem;
+      border-bottom: 1px solid #2c7ed7;
+      margin-top: 16px;
+      padding: 10px 12px;
+      z-index: 999999999;
+    }
+  }
+
+  .form-field__outline {
+
+    &--control {
+      &__input {
+        border: none;
+        outline: none;
+        background-color: white;
+        
+        border: 2px solid #a2a2a2;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 5px;
+      }
+      &__label {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        left: 8px;
+        margin: 0;
+        padding: 18px 12px 0;
+        position: absolute;
+        top: 0;
+        transition: all 0.4s;
+        color: #848484;
+        z-index: 99999;
+      }
+    }
+    &--select--arrow {          
+      right: 0;
+      position: absolute;
+      top: 15px;
+      color: $success-color;
+    }
+  }
+
+  &.form-field__outline--active {
+    .form-field__outline--control__input {
+      border: 2px solid $success-color;
+     }
+    .form-field__outline--control__label {
+      font-weight: 700;
+      background-color: white;
+      color: $success-color;
+      font-size: 0.75rem;
+      transform: translateY(-3px);
+      padding: 0px 10px;
+    }
+  }
+  &.form-field__outline--invalid {
+    .form-field__outline--control__input {
+      border: 2px solid $warn-color;
+     }
+    .form-field__outline--control__label {
+      font-weight: 700;
+      background-color: white;
+      color: $warn-color;
+      font-size: 0.80rem;
+      transform: translateY(-3px);
+      padding: 0px 10px;
+    }
+  }
+
+}

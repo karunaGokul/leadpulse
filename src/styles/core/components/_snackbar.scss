@@ -1,0 +1,67 @@
+.snack--bar {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: white;
+    min-width: 300px;
+    padding: 10px;
+    border-radius: 2px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+    
+    //-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s;
+    z-index: 9999999999;
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        align-items: center;
+    }
+
+    &__error {
+        background-color: #e23232;
+        .snack--bar__icon {
+            background-color: #e85353;
+        }
+    }
+    &__success {
+        background-color: #5BC3A2;
+        .snack--bar__icon {
+            background-color: #42987d9e;
+        }
+    }
+
+    &__message {
+        padding-left: 10px;
+    }
+    &__clear {
+        position: absolute;
+        right: 16px;
+        cursor: pointer;
+    }
+}
+@-webkit-keyframes fadein {
+    from {right: 0; opacity: 0;} 
+    to {right: 40px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {right: 0; opacity: 0;}
+    to {right: 40px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {right: 40px; opacity: 1;} 
+    to {right: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {right: 40px; opacity: 1;}
+    to {right: 0; opacity: 0;}
+  }

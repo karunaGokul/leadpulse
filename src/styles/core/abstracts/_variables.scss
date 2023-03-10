@@ -1,0 +1,113 @@
+$font-general: 'Montserrat', Arial, Helvetica, sans-serif;
+$font-icons: 'Font Awesome 5 Free' !default;
+$margin: top, left, right, bottom;
+
+$justify: flex-start, flex-end, center, space-between, space-around, space-evenly;
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
+$overflow: visible, hidden;
+
+$primary-color: #2c7ed7;
+$secondary-color:#475773;
+$warn-color: #DB3C39;
+$success-color: #009688;
+
+$color-blue: #2d62b8 !default;
+$color-green: #046582 !default;
+$color-red: #ec6d71 !default;
+$color-grey: #5F5F5F !default;
+
+$color-white: #ffffff !default;
+$color-black: #000000 !default;
+$color-brand: #00AAE7 !default;
+
+$blue1:#2c7ed7 !default;
+$blue2:#3d96e6 !default;
+$blue3:#013274 !default;
+$teal1:#4196ac !default;
+$teal2:#86d1de !default;
+$purple1:#7841ac !default;
+$purple2:#ac6ee5 !default;
+$green1:#49ac41 !default;
+$red1:#c23b31 !default;
+$yellow1:#f8f898 !default;
+$brown1:#64504f !default;
+
+
+$color-border: #e9ecef !default;
+
+$color-primary: $color-blue !default;
+$color-secondary: $color-green !default;
+$color-tertiary: $color-red !default;
+
+$colors-base: 
+(
+  "primary":    $color-primary,
+  "secondary":  $color-secondary,
+  "tertiary":   $color-tertiary
+) !default;
+
+$colors: 
+(
+  "blue": (
+    hue:          var(--color-blue-h), 
+    saturation:   var(--color-blue-s), 
+    lightness:    var(--color-blue-l)
+  ),
+  "green": (
+    hue:          var(--color-green-h),  
+    saturation:   var(--color-green-s), 
+    lightness:    var(--color-green-l)
+  ),
+  "red": (
+    hue:          var(--color-red-h), 
+    saturation:   var(--color-red-s), 
+    lightness:    var(--color-red-l)
+  ),
+  "grey": (
+    hue:          var(--color-grey-h), 
+    saturation:   var(--color-grey-s), 
+    lightness:    var(--color-grey-l)
+  ),
+);
+
+$color-body: $color-grey !default;
+$color-heading: $color-grey !default;
+$color-link: $color-grey !default;
+$color-border: #e9ecef !default;
+$color-link-hover: rgba($color-black, 0.75) !default;
+$color-loading: #9880ff !default;
+
+$animation-duration: 0.4s;
+
+$border-radius: .5rem !default;
+$box-shadow: 0 0 .4rem 0 rgba($color-black, 0.2) !default;
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1367px
+) !default;
+
+$font-weight-black: 800 !default;
+$font-weight-bold: 700 !default;
+$font-weight-medium: 600 !default;
+$font-weight-regular: 400 !default;
+$font-weight-light: 300 !default;
+
+$dropdown-background: $color-white !default;
+$dropdown-color: $color-grey !default;
+$dropdown-padding-y: 0.5rem !default;
+$dropdown-border-color: $color-border !default;
+$dropdown-item-padding-y: 1rem !default;  
+$dropdown-item-padding-x: 2rem !default;
+$dropdown-hover-background: lighten($color-grey, 60) !default;
+
+$spacing: 2rem !default;
+$padding: 2rem !default;
+$border-radius: .5rem !default;
+$box-shadow: 0 0 .4rem 0 rgba($color-black, 0.2) !default;
+$opacity-disabled: 0.6 !default;
+$modal-content-padding: $padding !default;

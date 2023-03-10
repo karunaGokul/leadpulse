@@ -1,0 +1,21 @@
+.content-page {
+    margin-top: 60px;
+    transition: all ease .5s;
+}
+.large__content {
+    margin-left: 80px;
+}
+.small__content {
+    margin-left: 220px;
+}
+
+.content--wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 100%;
+
+    > div {
+        flex: 1;
+    }
+}

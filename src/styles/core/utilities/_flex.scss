@@ -1,0 +1,10 @@
+@each $value in $justify {
+    .justify--#{$value}  {
+        justify-content: #{$value}
+    }
+}
+@each $value in $justify {
+    .align--#{$value}  {
+        align-items: #{$value}
+    }
+}

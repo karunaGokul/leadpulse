@@ -1,0 +1,117 @@
+.notifications {
+    position: relative;
+
+    &.show {
+        &:after {
+            position: absolute;
+            content: '';
+            border: 10px solid #9e9e9e33;
+            left: 10px;
+            top: 44px;
+            background-color: white;
+            color: white;
+            border-bottom: 10px solid #ffffff;
+            z-index: 9999999999999;
+        }
+    }
+
+    &--icon {
+        font-size: 32px;
+        position: relative;
+        color: $blue3;
+        cursor: pointer;
+
+        &__count {
+            position: absolute;
+            font-family: Montserrat,Arial,Helvetica,sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            color: #fff;
+            background-color: $warn-color;
+            border-radius: 50%;
+            height: 16px;
+            width: 16px;
+            top: -2px;
+            right: -6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &--menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        float: left;
+        min-width: 100%;
+        color: $dropdown-color;
+        background: $dropdown-background;
+        text-align: left;
+        list-style: none;
+        border: solid 1px $dropdown-border-color;
+        border-radius: 5px;
+        box-shadow: $box-shadow;
+        max-height: 400px;
+        overflow: auto;
+
+        &.show {
+            display: block;
+            width: 400px;
+        }
+        &__left {
+            left: auto;
+            right: 0;
+            top: 62px;
+        }
+        &__header {
+            padding: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #3c4958;
+            text-align: center;
+            border-bottom: 1px solid #d8d8d8;
+        }
+        &__content {
+            height: 240px;
+            overflow: auto;
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-bottom: 1px solid #e6e6e6;
+            font-size: 16px;
+            
+            &--message {
+                margin: 0.8rem;
+                color: #1b1818;
+                font-size: 14px;
+            }
+            &--time {
+                margin: 0.8rem;
+                color: #979292;
+                font-size: 12px;
+            }
+            &--icon {
+                i {
+                    padding: 10px;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 10px;
+                    width: 30px;
+                    text-align: center;
+
+                    &.fa-download {
+                        background-color: $primary-color;
+                    }
+                    &.fa-file-invoice {
+                        background-color: $success-color;
+                    }
+                }
+            }
+        }
+    }
+}

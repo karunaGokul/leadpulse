@@ -1,0 +1,79 @@
+.clipboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    &__header {
+        background-color: white;
+        color: #3C4958;
+
+        &--title {
+            margin: 0;
+        }
+        &--clear {
+            cursor: pointer;
+        }
+    }
+
+    &__msg {
+        background-color: #f3f3f3;
+        padding: 1rem;
+        font-size: 14px;
+    }
+
+    &--help__desk {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #dcdcdc;
+        padding-bottom: 1rem;
+
+        &--count {
+            background-color: #3c4958;
+            color: white;
+            height: 34px;
+            padding: 10px;
+            line-height: 1;
+            border-radius: 50%;
+            width: 34px;
+            text-align: center;
+            margin-right: 12px;
+        }
+        &--content {
+            display: flex;
+            align-items: center;
+
+            &__text {
+                margin-right: 7px;
+            }
+            &__input {
+                display: flex;
+
+                &--msg {
+                    border: 1px solid #e3ece3;
+                    padding: 1rem;
+                    font-size: 12px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width: 420px;
+                    font-style: oblique;
+                }
+                &--copy {
+                    border: 1px solid #dedede;
+                    background: #e3ece3;
+                    width: 100px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    button {
+        padding: 1rem;
+        border: none;
+        outline: none;
+        background-color: #009688;
+        color: white;
+        cursor: pointer;
+    }
+}

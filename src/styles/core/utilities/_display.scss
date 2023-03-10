@@ -1,0 +1,12 @@
+@each $value in $displays {
+    .display--#{$value} { display: $value !important; }
+}
+@each $value in $overflow {
+    .overflow--#{$value} { overflow: $value !important }
+}
+.float--left {
+    float: left;
+}
+.float--right {
+    float: right;
+}

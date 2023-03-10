@@ -1,0 +1,48 @@
+[data-tooltip] {
+    position: relative;
+    display: inline-block;        
+
+    &::before,
+    &::after {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translate(-50%, 10px);
+        pointer-events: none;
+        transition: .3s;
+        opacity: 0;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        border-top: 8px solid lighten($color-grey, 5);
+        border-right: 8px solid transparent;
+        border-bottom: 0 solid transparent;
+        border-left: 8px solid transparent;
+        margin-bottom: 2px;
+    }
+
+    &::after {
+        content: attr(data-tooltip);
+        display: inline-block;
+        background-color: $color-grey;
+        color: $color-white;
+        padding: .5em 1em;
+        white-space: nowrap;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    &:hover::before {
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+
+    &:hover::after {
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+}

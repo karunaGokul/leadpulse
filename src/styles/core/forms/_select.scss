@@ -1,0 +1,63 @@
+.form-field {
+    &__control {
+        .form-field__select {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: #eee;
+            padding: 1rem;
+            border-bottom: 1px solid $success-color;
+            padding-left: 1rem;
+            font-size: 1rem;
+            margin-top: 15px;
+            padding-bottom: 10px;
+            color: #333;
+        }
+        .form-field__select--label {
+            display: block;
+            font-weight: normal;
+            left: 0;
+            margin: 0;
+            padding: 18px 12px 0;
+            position: absolute;
+            top: 0;
+            transition: all 0.4s;
+            font-size: 0.75rem;
+            transform: translateY(-14px);
+            z-index: 99999;
+            color: $success-color;
+        }
+        .form-field__select--arrow {
+            position: absolute;
+            right: 7px;
+            top: 20px;
+            color: $success-color;
+        }
+    }
+    .autocomplete {
+        position: absolute;
+        top: 58px;
+        left: 5px;
+        right: 5px;
+        background-color: white;
+        border: 1px solid #cecece;
+        color: #848484;
+        border-radius: 5px;
+        z-index: 99999999;
+        box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+
+        &__top {
+            top: -48px;
+        }
+        
+        &__item {
+            padding: 1rem;
+            cursor: pointer;
+
+            &--active {
+                background-color: rgba($success-color, .2);
+                color: $success-color;
+            }
+        }
+    }
+}

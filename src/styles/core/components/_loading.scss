@@ -1,0 +1,226 @@
+.loading {
+    &-container {
+        width: 300px;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem 0;
+    margin: 0 -5%;
+    overflow: hidden;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    z-index: 9999999;
+}
+
+.loading-pulse {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $success-color;
+    color: $success-color;
+    box-shadow: 9999px 0 0 -5px $success-color;
+    animation: loadingPulse 1.5s infinite linear;
+    animation-delay: .25s;
+
+    &::before,
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: $success-color;
+        color: $success-color;
+    }
+
+    &::before {
+        box-shadow: 9984px 0 0 -5px $success-color;
+        animation: loadingPulseBefore 1.5s infinite linear;
+        animation-delay: 0s;
+    }
+
+    &::after {
+        box-shadow: 10014px 0 0 -5px $success-color;
+        animation: loadingPulseAfter 1.5s infinite linear;
+        animation-delay: .5s;
+    }
+}
+
+@keyframes loadingPulseBefore {
+    0% {
+        box-shadow: 9984px 0 0 -5px $success-color;
+    }
+
+    30% {
+        box-shadow: 9984px 0 0 2px $success-color;
+    }
+
+    60%,
+    100% {
+        box-shadow: 9984px 0 0 -5px $success-color;
+    }
+}
+
+@keyframes loadingPulse {
+    0% {
+        box-shadow: 9999px 0 0 -5px $success-color;
+    }
+
+    30% {
+        box-shadow: 9999px 0 0 2px $success-color;
+    }
+
+    60%,
+    100% {
+        box-shadow: 9999px 0 0 -5px $success-color;
+    }
+}
+
+@keyframes loadingPulseAfter {
+    0% {
+        box-shadow: 10014px 0 0 -5px $success-color;
+    }
+
+    30% {
+        box-shadow: 10014px 0 0 2px $success-color;
+    }
+
+    60%,
+    100% {
+        box-shadow: 10014px 0 0 -5px $success-color;
+    }
+}
+
+.loading-float {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $success-color;
+    color: $success-color;
+    animation: loadingFloat 3s infinite cubic-bezier(0.15, 0.6, 0.9, 0.1);
+
+    &::before,
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+    }
+
+    &::before {
+        left: -12px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: $success-color;
+        color: $success-color;
+        animation: loadingFloatBefore 3s infinite ease-in-out;
+    }
+
+    &::after {
+        left: -24px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: $success-color;
+        color: $success-color;
+        animation: loadingFloatAfter 3s infinite cubic-bezier(0.4, 0, 1, 1);
+    }
+}
+
+@keyframes loadingFloat {
+    0% {
+        left: calc(-50% - 5px);
+    }
+
+    75% {
+        left: calc(50% + 105px);
+    }
+
+    100% {
+        left: calc(50% + 105px);
+    }
+}
+
+@keyframes loadingFloatBefore {
+    0% {
+        left: -50px;
+    }
+
+    50% {
+        left: -12px;
+    }
+
+    75% {
+        left: -50px;
+    }
+
+    100% {
+        left: -50px;
+    }
+}
+
+@keyframes loadingFloatAfter {
+    0% {
+        left: -100px;
+    }
+
+    50% {
+        left: -24px;
+    }
+
+    75% {
+        left: -100px;
+    }
+
+    100% {
+        left: -100px;
+    }
+}
+.loading-circle {
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 18px;
+
+    & div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 6px;
+        border: 3px solid $success-color;
+        border-radius: 50%;
+        animation: loadingCircle 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: $color-white transparent transparent transparent;
+      }
+      & div:nth-child(1) {
+        animation-delay: -0.45s;
+      }
+      & div:nth-child(2) {
+        animation-delay: -0.3s;
+      }
+      & div:nth-child(3) {
+        animation-delay: -0.15s;
+      }
+      @keyframes loadingCircle  {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+}

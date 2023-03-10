@@ -1,0 +1,44 @@
+@each $value in $margin {
+    @for $j from 0 through 8 {
+        .ma--#{$value}-#{$j} { margin-#{$value} : #{$j}rem !important}
+    }
+}
+
+@for $i from 0 through 8 {
+    .ma-#{$i} { margin: #{$i}rem !important }
+}
+@for $x from 0 through 8 {
+    .ma--x-#{$x} { 
+        margin-left : #{$x}rem !important;
+        margin-right : #{$x}rem !important;
+    }
+}
+@for $y from 0 through 8 {
+    .ma--y-#{$y} { 
+        margin-top : #{$y}rem !important;
+        margin-bottom : #{$y}rem !important;
+    }
+}
+
+
+@each $value in $margin {
+    @for $j from 0 through 8 {
+        .pa--#{$value}-#{$j} { padding-#{$value} : #{$j}rem !important}
+    }
+}
+
+@for $i from 0 through 8 {
+    .pa-#{$i} { padding: #{$i}rem !important }
+}
+@for $x from 0 through 8 {
+    .pa--x-#{$x} { 
+        padding-left : #{$x}rem !important;
+        padding-right : #{$x}rem !important;
+    }
+}
+@for $y from 0 through 8 {
+    .pa--y-#{$y} { 
+        padding-top : #{$y}rem !important;
+        padding-bottom : #{$y}rem !important;
+    }
+}

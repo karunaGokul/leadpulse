@@ -1,0 +1,19 @@
+.alert {
+    position: relative;
+
+    &--icon {
+        font-size: 160px;
+
+        &.fa-check {
+            color: $success-color;
+        }
+        &.fa-times {
+            color: $warn-color;
+        }
+    }
+
+    &--message {
+        color: #737373;
+        font-weight: 600;
+    }
+}

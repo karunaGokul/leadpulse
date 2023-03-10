@@ -1,0 +1,98 @@
+.toolbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 16px;
+    white-space: nowrap;
+    height: 60px;
+    background: white;
+    color: #6c757d;
+    z-index: 99999999;
+    transition: all ease .5s;
+    //box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+    border-bottom: 1px solid #d4d4d4;
+
+    &__small {
+        left: 220px;
+    }
+    &__large {
+        left: 80px;
+    }
+
+    &--logo {
+        border-right: 1px solid #eaeaea;
+        
+        &__img {
+            width: 120px;
+            padding: 12px;
+        }
+    }
+
+    .icon--bars {
+        cursor: pointer;
+    }
+    
+    &--page__info {
+        color: $blue3;
+    }
+
+    &--spacer {
+        flex: 1 1 auto;
+    }
+    &--credits {
+        font-size: 13px;
+        color: $blue3;
+        padding: 0.8rem 4rem;
+        border-radius: 40px;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+    }
+    &--right {
+        display: flex;
+        align-items: center;
+
+        .toolbar--dropdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+    
+            &__avator {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                background-color: $primary-color;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &__username {
+                margin-bottom: 1rem;
+                padding: 10px;
+                border-bottom: 1px solid #f1f1f1;
+    
+                .hello--icon {
+                    color: #ecba24;
+                    font-size: 17px;
+                }
+                i {
+                    padding: 0 6px;
+                }
+            }
+            .dropdown-item {
+                padding: 1rem;
+                i {
+                    padding-right: 0.8rem;
+                }
+            }
+        }
+    }
+    
+}
